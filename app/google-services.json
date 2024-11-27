@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "691537920925",
+    "project_id": "laptopvpn-81bb9",
+    "storage_bucket": "laptopvpn-81bb9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691537920925:android:10f04a31717ce82536e574",
+        "android_client_info": {
+          "package_name": "com.example.laptopvpn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvj16N-_lMZ5O4OiL5ZT3GuX-xTfV37MY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
