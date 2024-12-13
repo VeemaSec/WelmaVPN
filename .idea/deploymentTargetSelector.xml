@@ -5,6 +5,7 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+<<<<<<< Updated upstream
       <SelectionState runConfigName="SignUpActivity">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
@@ -12,6 +13,15 @@
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
       <SelectionState runConfigName="SignUpActivity (1)">
+=======
+      <SelectionState runConfigName="LoginActivity">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="SubscriptionActivity">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="MainActivity">
+>>>>>>> Stashed changes
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

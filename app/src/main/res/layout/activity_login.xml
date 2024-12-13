@@ -6,16 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="340dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/tvRedirectSignUp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="186dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/welmalogo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="420dp"
+        android:layout_height="357dp"
+        android:layout_marginBottom="110dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <EditText
             android:id="@+id/etEmailAddress"
@@ -25,11 +38,18 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
             android:autofillHints="emailAddress"
+            android:background="#52B2BD"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:textColorHint="#757575" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#1B4F71"
+            android:textColorHighlight="#1B4F71"
+            android:textColorHint="#1B4F71"
+            android:textColorLink="#1B4F71"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -39,36 +59,39 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
             android:autofillHints="password"
+            android:background="#52B2BD"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            android:textColorHint="#757575" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#1B4F71"
+            android:textColorHighlight="#1B4F71"
+            android:textColorHint="#1B4F71"
+            android:textColorLink="#1B4F71" />
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="Login" />
+            android:backgroundTint="#1B5072"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvRedirectSignUp"
+            android:layout_width="382dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Don't have an Account? ->Sign Up!"
+            android:textColor="#008BFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvRedirectSignUp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="369dp"
-        android:gravity="center_horizontal"
-        android:text="Don't have an account -> Sign in!"
-        android:textColor="#18206F"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

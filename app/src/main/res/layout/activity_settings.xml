@@ -5,19 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SettingsActivity">
 
-<<<<<<< Updated upstream
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-=======
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="0dp"
@@ -66,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-70dp"
                 android:backgroundTint="#00FFFFFF"
-                app:srcCompat="@drawable/connection_icon_active" />
+                app:srcCompat="@drawable/connection_icon" />
 
             <ImageButton
                 android:id="@+id/btnUser"
@@ -93,66 +84,101 @@
                 android:layout_marginLeft="255dp"
                 android:layout_marginTop="-70dp"
                 android:backgroundTint="#00FFFFFF"
-                app:srcCompat="@drawable/settings_icon" />
+                app:srcCompat="@drawable/settings_icon_active" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="785dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginBottom="0dp"
                 android:visibility="visible"
                 app:cardBackgroundColor="#57A8E0"
                 app:contentPadding="20dp">
 
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="Settings"
+                    android:textColor="#1B5072"
+                    android:textSize="25sp" />
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="55dp"
+                    android:background="#C075DDE2"
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
-                    <EditText
-                        android:id="@+id/editTextText"
-                        android:layout_width="226dp"
-                        android:layout_height="60dp"
-                        android:background="#C2EDF4"
-                        android:ems="10"
-                        android:hint="IP you want to connect"
-                        android:inputType="text"
-                        android:padding="10dp"
-                        android:textColor="#0E7373"
-                        android:textColorHint="#0E7373"
-                        android:textSize="18sp" />
-
-
-                    <Button
-                        android:id="@+id/btnConnect"
-                        android:layout_width="wrap_content"
+                    <Switch
+                        android:id="@+id/switchAutoConnect"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:height="60dp"
-                        android:backgroundTint="#1B5072"
-                        android:text="Connect"
-                        android:textColorLink="#FDF9FC"
+                        android:text="AutoConnect"
+                        android:textColor="#1B5072"
                         android:textSize="20sp" />
+
+                    <Switch
+                        android:id="@+id/switchKill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="KillSwitch"
+                        android:textColor="#1B5072"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="186dp"
+                            android:layout_height="wrap_content"
+                            android:text="Version: xxxx.xxx.x."
+                            android:textColor="#1B5072"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/btnLogOut"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#1B5072"
+                            android:text="Update"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="186dp"
+                            android:layout_height="wrap_content"
+                            android:text="Logging Out Disconnect the VPN"
+                            android:textColor="#1B5072"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/btnLogOut"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="#1B5072"
+                            android:text="Log Out"
+                            android:textSize="20sp" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <EditText
-                    android:id="@+id/editTextText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="288dp"
-                    android:layout_marginTop="90dp"
-                    android:background="#C080EEF4"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="List of avaible IP addresses:"
-                    android:textAlignment="center"
-                    android:textColor="#1B5072" />
+
 
             </androidx.cardview.widget.CardView>
-
 
         </LinearLayout>
 
     </LinearLayout>
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

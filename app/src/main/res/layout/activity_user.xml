@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+  <ImageView
+      android:id="@+id/imageView1"
+      android:layout_width="0dp"
+      android:layout_height="148dp"
+      android:layout_marginTop="60dp"
+      android:baselineAligned="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/welmalogo" />
+
+  <LinearLayout
+      android:id="@+id/linearLayout1"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="1dp"
+      android:layout_marginTop="1dp"
+      android:layout_marginEnd="1dp"
+      android:layout_marginBottom="1dp"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="250dp"
+          android:background="?attr/colorPrimary"
+          android:backgroundTint="#1B5072"
+          android:minHeight="?attr/actionBarSize"
+          android:paddingLeft="200dp"
+          android:theme="?attr/actionBarTheme" />
+
+      <ImageButton
+          android:id="@+id/btnConnection"
+          android:layout_width="95dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="-70dp"
+          android:backgroundTint="#00FFFFFF"
+          app:srcCompat="@drawable/connection_icon" />
+
+      <ImageButton
+          android:id="@+id/btnUser"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="90dp"
+          android:layout_marginTop="-70dp"
+          android:backgroundTint="#00FFFFFF"
+          app:srcCompat="@drawable/user_icon_active" />
+
+      <ImageButton
+          android:id="@+id/btnSubsciption"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="175dp"
+          android:layout_marginTop="-70dp"
+          android:backgroundTint="#00FFFFFF"
+          app:srcCompat="@drawable/shop_icon" />
+
+      <ImageButton
+          android:id="@+id/btnSettings"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="255dp"
+          android:layout_marginTop="-70dp"
+          android:backgroundTint="#00FFFFFF"
+          app:srcCompat="@drawable/settings_icon" />
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="785dp"
+          android:layout_marginTop="0dp"
+          android:layout_marginBottom="0dp"
+          android:visibility="visible"
+          app:cardBackgroundColor="#57A8E0"
+          app:contentPaddingLeft="30dp"
+          app:contentPaddingRight="30dp"
+          app:contentPaddingTop="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="141dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="65dp"
+            android:text="Hello, (Email)"
+            android:textColor="#1B5072"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#771B5072"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:text="In order to change your Password it has to be typed twice below."
+            android:textColor="#C6E8FF"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="105dp"
+            android:background="#A5E7DE"
+            android:backgroundTint="#A5E7DE"
+            android:ems="10"
+            android:hint="Your New Email Address"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="#1B5072" />
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:backgroundTint="#1B5072"
+            android:text="Change Email!"
+            android:textColorLink="#1B5072" />
+
+        <EditText
+            android:id="@+id/NewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="225dp"
+            android:background="#A5E7DE"
+            android:backgroundTint="#A5E7DE"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="Your New Password"
+            android:textColor="#1B5072" />
+
+        <EditText
+            android:id="@+id/NewPasswordAgain"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="280dp"
+            android:background="#A5E7DE"
+            android:backgroundTint="#A5E7DE"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="Your New Password"
+            android:textColor="#1B5072" />
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="335dp"
+            android:backgroundTint="#1B5072"
+            android:text="Change Password!"
+            android:textColorLink="#1B5072" />
+
+      </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

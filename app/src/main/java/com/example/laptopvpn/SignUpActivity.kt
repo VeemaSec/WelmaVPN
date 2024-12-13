@@ -18,7 +18,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var btnSignUp: Button
     lateinit var tvRedirectLogin: TextView
 
-    // create Firebase authentication object
+    // Create Firebase Auth Object
     private lateinit var auth: FirebaseAuth
 
 
@@ -27,21 +27,21 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        // View Bindings
+        // ViewBindings
         etEmail = findViewById(R.id.etSEmailAddress)
         etConfPass = findViewById(R.id.etSConfPassword)
         etPass = findViewById(R.id.etSPassword)
         btnSignUp = findViewById(R.id.btnSSigned)
         tvRedirectLogin = findViewById(R.id.tvRedirectLogin)
 
-        // Initialising auth object
+        // Initialising Auth Object
         auth = Firebase.auth
 
         btnSignUp.setOnClickListener {
             signUpUser()
         }
 
-        // switching from signUp Activity to Login Activity
+        // From SignUp to Login Screen
         tvRedirectLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
@@ -54,25 +54,24 @@ class SignUpActivity : AppCompatActivity() {
         val pass = etPass.text.toString()
         val confirmPassword = etConfPass.text.toString()
 
-        // check pass
+        //Check Password
         if (email.isBlank() || pass.isBlank() || confirmPassword.isBlank()) {
             Toast.makeText(this, "Email and Password can't be blank", Toast.LENGTH_SHORT).show()
             return
         }
-
         if (pass != confirmPassword) {
             Toast.makeText(this, "Password and Confirm Password do not match", Toast.LENGTH_SHORT)
                 .show()
             return
         }
-        // If all credential are correct
-        // We call createUserWithEmailAndPassword
-        // using auth object and pass the
-        // email and pass in it.
+        //Login success and Fail
         auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully Singed Up", Toast.LENGTH_SHORT).show()
+                // using finish() to end the activity
                 finish()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
             }
