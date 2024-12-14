@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/welmalogo" />
+        app:srcCompat="@drawable/vpnlogo" />
 
     <EditText
         android:id="@+id/etSConfPassword"
@@ -117,5 +117,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etSConfPassword" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

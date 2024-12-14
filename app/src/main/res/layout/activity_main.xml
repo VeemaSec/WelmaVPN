@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<<<<<<< Updated upstream
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-=======
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="0dp"
@@ -27,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/welmalogo" />
+        app:srcCompat="@drawable/vpnlogo" />
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -147,12 +145,8 @@
                     android:text="List of avaible IP addresses:"
                     android:textAlignment="center"
                     android:textColor="#1B5072" />
-
             </androidx.cardview.widget.CardView>
-
-
         </LinearLayout>
-
     </LinearLayout>
->>>>>>> Stashed changes
+
 </androidx.constraintlayout.widget.ConstraintLayout>

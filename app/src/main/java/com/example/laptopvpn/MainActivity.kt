@@ -1,44 +1,27 @@
 package com.example.laptopvpn
 
+import android.content.Intent
 import android.os.Bundle
-<<<<<<< Updated upstream
-=======
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
->>>>>>> Stashed changes
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-<<<<<<< Updated upstream
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-    }
-}
-=======
 
-            ////////////////////////////////
-            //NAVIGATION For LoggedIn Users
-            lateinit var btnConnection: ImageButton
-            lateinit var btnUser: ImageButton
-            lateinit var btnSubsciption: ImageButton
-            lateinit var btnSettings: ImageButton
+        // ViewBindings
 
-            // ViewBindings
-            btnConnection = findViewById(R.id.btnConnection)
-            btnUser = findViewById(R.id.btnUser)
-            btnSubsciption = findViewById(R.id.btnSubsciption)
-            btnSettings = findViewById(R.id.btnSettings)
+        ////////////////////////////////
+        //NAVIGATION For LoggedIn Users
+        var btnConnection: ImageButton = findViewById(R.id.btnConnection)
+        var btnUser: ImageButton = findViewById(R.id.btnUser)
+        var btnSubsciption: ImageButton = findViewById(R.id.btnSubsciption)
+        var btnSettings: ImageButton = findViewById(R.id.btnSettings)
 
             // OnClickListeners for Navigation
             btnConnection.setOnClickListener {
@@ -62,12 +45,11 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-            ///////////////////////////////////
-            //ConnectionPage Content Functions
-            //////////////////////////////////
-            //val stopstartvpn = StopStartVpn()
-            lateinit var connectButton: Button
-            connectButton = findViewById(R.id.btnConnect)
+        ///////////////////////////////////
+        //ConnectionPage Content Functions
+        //////////////////////////////////
+        //val stopstartvpn = StopStartVpn()
+        var connectButton: Button = findViewById(R.id.btnConnect)
 
             fun VpnService() {
                 val intent = Intent(this, StopStartVpn::class.java)
@@ -81,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             }
 
 }
-} //Remove brackets if wanting to use code below
+}//Remove brackets if wanting to use code below
 ////////////////////////////////////////////////////////////////////////////////
 
         // Lateinits
@@ -117,4 +99,3 @@ class MainActivity : AppCompatActivity() {
     //}
     //}
 //}
->>>>>>> Stashed changes

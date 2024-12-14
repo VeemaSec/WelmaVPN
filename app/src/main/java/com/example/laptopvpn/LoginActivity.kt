@@ -52,15 +52,13 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully LoggedIn", Toast.LENGTH_SHORT).show()
-<<<<<<< Updated upstream
-            } else
-=======
                 val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                startActivity(intent)
             } else {
->>>>>>> Stashed changes
                 Toast.makeText(this, "Log In failed ", Toast.LENGTH_SHORT).show()
+
+            }
         }
     }
 
-}}
+}
