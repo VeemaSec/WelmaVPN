@@ -2,6 +2,7 @@ package com.example.laptopvpn
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,16 +15,10 @@ class SubscriptionActivity : AppCompatActivity() {
 
         ////////////////////////////////
         //NAVIGATION For LoggedIn Users
-        lateinit var btnConnection: ImageButton
-        lateinit var btnUser: ImageButton
-        lateinit var btnSubsciption: ImageButton
-        lateinit var btnSettings: ImageButton
-
-        // ViewBindings
-        btnConnection = findViewById(R.id.btnConnection)
-        btnUser = findViewById(R.id.btnUser)
-        btnSubsciption = findViewById(R.id.btnSubsciption)
-        btnSettings = findViewById(R.id.btnSettings)
+        var btnConnection: ImageButton = findViewById(R.id.btnConnection)
+        var btnUser: ImageButton = findViewById(R.id.btnUser)
+        var btnSubsciption: ImageButton = findViewById(R.id.btnSubsciption)
+        var btnSettings: ImageButton = findViewById(R.id.btnSettings)
 
         // OnClickListeners for Navigation
         btnConnection.setOnClickListener {
@@ -46,10 +41,30 @@ class SubscriptionActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        ///////////////////////////////////
-        //SubscriptionPage Content Functions
-        //////////////////////////////////
-        //Come here!
+    ///////////////////////////////////
+    //SubscriptionPage Content Functions
+    //////////////////////////////////
+        var subscriptionTime = 0
 
+        //SettingUp Payment Buttons
+        var btnBuy1: Button = findViewById(R.id.btnBuy1)
+        var btnBuy2: Button = findViewById(R.id.btnBuy2)
+        var btnBuy3: Button = findViewById(R.id.btnBuy3)
+
+        //OnClickListeners to pre-defined Payment Options
+        btnBuy1.setOnClickListener {
+            subscriptionTime += 30
+        }
+        btnBuy2.setOnClickListener {
+            subscriptionTime += 180
+        }
+        btnBuy3.setOnClickListener {
+            subscriptionTime += 365
+        }
+
+        //Needs to Return The Updated 'subscriptionTime' -value to Cloud FireStore
+
+        }
     }
-}
+
+

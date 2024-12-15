@@ -31,7 +31,7 @@ class StopStartVpn : VpnService() {
 
     private fun establishVpn(): ParcelFileDescriptor?{
         val builder = Builder()
-        builder.addAddress("180.183.157.159",32)
+        builder.addAddress("180.000.000.001",32)
         builder.addRoute("0.0.0.0",0)
         return builder.establish()
     }
@@ -42,7 +42,7 @@ class StopStartVpn : VpnService() {
         val fileOutputStream = FileOutputStream(parcelFileDescriptor.fileDescriptor)
         val datagramChannel = DatagramChannel.open()
         datagramChannel.socket().bind(InetSocketAddress(0))
-        datagramChannel.connect(InetSocketAddress("180.183.157.159",1080))
+        datagramChannel.connect(InetSocketAddress("180.00.000.001",1080))
 
         while(true){
             byteBuffer.clear()

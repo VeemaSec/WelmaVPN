@@ -1,5 +1,6 @@
 package com.example.laptopvpn
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -63,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             }
 
 }
-}//Remove brackets if wanting to use code below
+}//
 ////////////////////////////////////////////////////////////////////////////////
 
         // Lateinits
@@ -91,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 
         // Create a local TUN interface using predetermined addresses
 //        val localTunnel = builder
-//            .addAddress("192.168.2.2", 24)
+//            .addAddress("192.0.0.1", 24)
 //            .addRoute("0.0.0.0", 0)
 //            .addDnsServer("0.0.0.0")
 //            .establish()

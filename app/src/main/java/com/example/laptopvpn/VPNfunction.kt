@@ -21,7 +21,7 @@ class VPNfunction : VpnService() {
         val VpnService = VpnService()
         VpnService.apply {
             val builder = Builder()
-            builder.addAddress("184.178.172.18", 32)
+            builder.addAddress("184.000.000.001", 32)
             builder.addRoute("0.0.0.0", 0)
             vpnInterface = builder.establish()
         }

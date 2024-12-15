@@ -12,18 +12,14 @@ class SettingsActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_settings)
 
+        // ViewBindings
+
         ////////////////////////////////
         //NAVIGATION For LoggedIn Users
-        lateinit var btnConnection: ImageButton
-        lateinit var btnUser: ImageButton
-        lateinit var btnSubsciption: ImageButton
-        lateinit var btnSettings: ImageButton
-
-        // ViewBindings
-        btnConnection = findViewById(R.id.btnConnection)
-        btnUser = findViewById(R.id.btnUser)
-        btnSubsciption = findViewById(R.id.btnSubsciption)
-        btnSettings = findViewById(R.id.btnSettings)
+        var btnConnection: ImageButton = findViewById(R.id.btnConnection)
+        var btnUser: ImageButton = findViewById(R.id.btnUser)
+        var btnSubsciption: ImageButton = findViewById(R.id.btnSubsciption)
+        var btnSettings: ImageButton = findViewById(R.id.btnSettings)
 
         // OnClickListeners for Navigation
         btnConnection.setOnClickListener {
